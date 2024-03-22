@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="7dp"
+                android:text="注意：开始前请阅读注意事项，确保您提出的问题合理"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#ff0"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="7dp"
+                    android:text="选择牌阵"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/card_array_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="#dfff"
+                    android:entries="@array/card_arrays" />
+
+                <LinearLayout
+                    android:id="@+id/layout_enable_multi_times"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/rd_cb_use_multi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="20dp"
+                        android:text="抽取多组"
+                        android:textColor="#fff" />
+
+                    <Spinner
+                        android:id="@+id/rd_s_multi_times"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#dfff"
+                        android:entries="@array/muti_times"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="7dp"
+                    android:text="附加牌"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checkedButton="@+id/rd_rb_1"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rd_rb_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="不使用"
+                        android:textColor="#fff" />
+
+                    <RadioButton
+                        android:id="@+id/rd_rb_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="指示牌"
+                        android:textColor="#fff" />
+
+                    <RadioButton
+                        android:id="@+id/rd_rb_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="切牌"
+                        android:textColor="#fff" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="7dp"
+                    android:text="牌型模式"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checkedButton="@+id/rd_rbm_1"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rd_rbm_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="全部78张牌"
+                        android:textColor="#fff" />
+
+                    <RadioButton
+                        android:id="@+id/rd_rbm_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="仅使用大阿尔卡纳牌"
+                        android:textColor="#fff" />
+
+                    <RadioButton
+                        android:id="@+id/rd_rbm_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="仅使用小阿尔卡纳牌"
+                        android:textColor="#fff" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="7dp"
+                    android:text="其他选项"
+                    android:paddingTop="5dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/rd_cb_discard_ori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="100dp"
+                        android:text="忽略正逆位"
+                        android:textColor="#fff" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="7dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/rd_bt_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="start_on_click"
+                    android:text="静心冥想，开始占卜" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="7dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
+                    android:text="如何静心冥想？\n找一个舒服的姿势闭上眼睛深呼吸，屏除心中杂念，专心在想要寻找答案的问题上。通常会有其他声音出现，可能是家人、朋友或同事，感谢他并放下。直到剩下自己的声音，这时就准备好抽牌了。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

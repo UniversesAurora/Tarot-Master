@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="card_arrays">
+        <item>无（抽取一张，可用于练习）</item>
+        <item>无牌阵三张（通用）</item>
+        <item>爱情维纳斯（感情）</item>
+        <item>六芒星阵（工作，人际关系）</item>
+        <item>二选一牌阵（选择类）</item>
+        <item>是否牌阵（慎用）</item>
+    </string-array>
+
+    <string-array name="muti_times">
+        <item>2 组</item>
+        <item>3 组</item>
+        <item>4 组</item>
+        <item>5 组</item>
+        <item>6 组</item>
+    </string-array>
+
+    <string-array name="cautions">
+        <item>塔罗九戒</item>
+        <item>如何问一个好问题</item>
+    </string-array>
+</resources>
